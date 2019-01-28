@@ -40,4 +40,9 @@ func main() {
 	fmt.Println(xi,xf64,xt,xf)
 
 	fmt.Println(Pi,Username,Password)
+
+	var (
+		u8 uint8 = 255
+	)
+	fmt.Println(u8)
 }
