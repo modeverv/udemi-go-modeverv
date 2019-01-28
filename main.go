@@ -28,4 +28,8 @@ func main() {
 		t,f bool = true,false
 		)
 	fmt.Println(i,f64,s,t,f)
+	xi := 1
+	xf64 := 1.2
+	xt,xf := true,false
+	fmt.Println(xi,xf64,xt,xf)
 }
