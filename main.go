@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"os/user"
-	"time"
+	"strings"
+//	"os/user"
+//	"time"
 )
 
 const Pi = 3.14
@@ -25,6 +26,7 @@ func buzz() {
 }
 
 func main() {
+	/*
 	// buzz()
 	fmt.Println("Hello World", time.Now())
 	buzz()
@@ -47,4 +49,13 @@ func main() {
 		u8 uint8 = 255
 	)
 	fmt.Println(u8)
+	*/
+	fmt.Println("Hello World" + "aaa")
+	fmt.Println("He"[0])
+	fmt.Println(string("He"[0]))
+	var s = "Hel"
+	fmt.Println(strings.Replace(s,"H","X",1))
+	fmt.Println(`test
+				  test
+	test`)
 }
