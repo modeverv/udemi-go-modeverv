@@ -6,6 +6,12 @@ import(
 	"time"
 )
 
+const Pi = 3.14
+
+const (
+	Username = "test_user"
+	Password = "test_pass"
+)
 func init() {
 	fmt.Println("Init")
 }
@@ -32,4 +38,6 @@ func main() {
 	xf64 := 1.2
 	xt,xf := true,false
 	fmt.Println(xi,xf64,xt,xf)
+
+	fmt.Println(Pi,Username,Password)
 }
