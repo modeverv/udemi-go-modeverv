@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strings"
+//	"strings"
 //	"os/user"
 //	"time"
 )
@@ -50,6 +50,7 @@ func main() {
 	)
 	fmt.Println(u8)
 	*/
+	/*
 	fmt.Println("Hello World" + "aaa")
 	fmt.Println("He"[0])
 	fmt.Println(string("He"[0]))
@@ -58,4 +59,7 @@ func main() {
 	fmt.Println(`test
 				  test
 	test`)
+	*/
+	t,f := true, false
+	fmt.Printf("%T %v \n",t,t)
 }
