@@ -5,7 +5,7 @@ import (
 	//	"strings"
 	//	"os/user"
 	//	"time"
-	"strconv"
+	//"strconv"
 )
 
 const Pi = 3.14
@@ -67,6 +67,7 @@ func main() {
 		fmt.Printf("%T %v \n", f, f)
 		fmt.Println("aadsfaab")
 	*/
+	/*
 	// ?
 	var x int = 1
 	xx := float64(x)
@@ -83,5 +84,16 @@ func main() {
 	
 	h := "Hello World"
 	fmt.Println(string(h[0]))
-	
+	*/
+	var a [2]int
+	a[0] = 100
+	a[1] = 200
+	fmt.Println(a)
+
+	var b = [2]int{100,200}
+	fmt.Println(b)
+
+	var c = []int{100,200}
+	c = append(c, 300)
+	fmt.Println(c)
 }
