@@ -5,6 +5,7 @@ import (
 	//	"strings"
 	//	"os/user"
 	//	"time"
+	"strconv"
 )
 
 const Pi = 3.14
@@ -60,9 +61,27 @@ func main() {
 					  test
 		test`)
 	*/
-	t, f := true, false
-	fmt.Printf("%T %v \n", t, t)
-	fmt.Printf("%T %v \n", f, f)
-	fmt.Println("aadsfaab")
+	/*
+		t, f := true, false
+		fmt.Printf("%T %v \n", t, t)
+		fmt.Printf("%T %v \n", f, f)
+		fmt.Println("aadsfaab")
+	*/
+	// ?
+	var x int = 1
+	xx := float64(x)
+	fmt.Printf("%T %v %F\n", xx, xx, xx)
 
+	var y float64 = 1.2
+	yy := int(y)
+	fmt.Printf("%T %v %d\n", yy, yy, yy)
+	
+	var s string = "14"
+	//z = int(s)
+	i,_ := strconv.Atoi(s)
+    fmt.Printf("%T %v %d\n", i, i, i)
+	
+	h := "Hello World"
+	fmt.Println(string(h[0]))
+	
 }
