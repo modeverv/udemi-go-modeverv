@@ -182,4 +182,36 @@ func main() {
 		fmt.Println(string(b))
 		//http://www.acii-code.com
 	*/
+	r1, r2 := add(10, 20)
+	fmt.Println(r1, r2)
+
+	r3 := cal(100, 2)
+	fmt.Println(r3)
+
+	f := func(x int) {
+		fmt.Println("inner func", x)
+	}
+	f(3)
+
+	func(x int) {
+		fmt.Println("inner func", x)
+	}(4)
+
+}
+
+//func add(x,y int) int {
+func add(x int, y int) (int, int) {
+	fmt.Println("add function")
+	fmt.Println(x + y)
+	return x + y, x - y
+}
+
+func cal(price, item int) (result int) {
+	result = price * item
+	// reurn	// naked return
+	return result
+}
+
+func convert(price int) float64 {
+	return float64(price)
 }
