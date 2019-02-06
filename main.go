@@ -182,21 +182,55 @@ func main() {
 		fmt.Println(string(b))
 		//http://www.acii-code.com
 	*/
-	r1, r2 := add(10, 20)
-	fmt.Println(r1, r2)
+	/*
+		r1, r2 := add(10, 20)
+		fmt.Println(r1, r2)
 
-	r3 := cal(100, 2)
-	fmt.Println(r3)
+		r3 := cal(100, 2)
+		fmt.Println(r3)
 
-	f := func(x int) {
-		fmt.Println("inner func", x)
+		f := func(x int) {
+			fmt.Println("inner func", x)
+		}
+		f(3)
+
+		func(x int) {
+			fmt.Println("inner func", x)
+		}(4)
+	*/
+	x := 0
+	increment := func() int {
+		x++
+		return x
 	}
-	f(3)
+	fmt.Println(increment())
+	fmt.Println(increment())
+	fmt.Println(increment())
 
-	func(x int) {
-		fmt.Println("inner func", x)
-	}(4)
+	counter := incrementGenerator()
+	fmt.Println(counter())
+	fmt.Println(counter())
+	fmt.Println(counter())
+	fmt.Println(counter())
 
+	c1 := circleArea(3.14)
+	fmt.Println(c1(2))
+	fmt.Println(c1(3))
+	c2 := circleArea(3)
+	fmt.Println(c2(2))
+	fmt.Println(c2(3))
+}
+func circleArea(pi float64) func(radius float64) float64 {
+	return func(radius float64) float64 {
+		return pi * radius * radius
+	}
+}
+func incrementGenerator() func() int {
+	x := 0
+	return func() int {
+		x++
+		return x
+	}
 }
 
 //func add(x,y int) int {
