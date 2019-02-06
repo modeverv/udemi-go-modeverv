@@ -198,28 +198,44 @@ func main() {
 			fmt.Println("inner func", x)
 		}(4)
 	*/
-	x := 0
-	increment := func() int {
-		x++
-		return x
-	}
-	fmt.Println(increment())
-	fmt.Println(increment())
-	fmt.Println(increment())
+	/*
+		x := 0
+		increment := func() int {
+			x++
+			return x
+		}
+		fmt.Println(increment())
+		fmt.Println(increment())
+		fmt.Println(increment())
 
-	counter := incrementGenerator()
-	fmt.Println(counter())
-	fmt.Println(counter())
-	fmt.Println(counter())
-	fmt.Println(counter())
+		counter := incrementGenerator()
+		fmt.Println(counter())
+		fmt.Println(counter())
+		fmt.Println(counter())
+		fmt.Println(counter())
 
-	c1 := circleArea(3.14)
-	fmt.Println(c1(2))
-	fmt.Println(c1(3))
-	c2 := circleArea(3)
-	fmt.Println(c2(2))
-	fmt.Println(c2(3))
+		c1 := circleArea(3.14)
+		fmt.Println(c1(2))
+		fmt.Println(c1(3))
+		c2 := circleArea(3)
+		fmt.Println(c2(2))
+		fmt.Println(c2(3))
+	*/
+	//?????
+	foo(10, 20, 30)
+
+	s := []int{1, 2, 3}
+	foo(s...)
 }
+
+// ?????
+func foo(params ...int) {
+	fmt.Println(len(params), params)
+	for _, param := range params {
+		fmt.Println(param)
+	}
+}
+
 func circleArea(pi float64) func(radius float64) float64 {
 	return func(radius float64) float64 {
 		return pi * radius * radius
