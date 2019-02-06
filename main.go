@@ -68,86 +68,118 @@ func main() {
 		fmt.Println("aadsfaab")
 	*/
 	/*
-	// ?
-	var x int = 1
-	xx := float64(x)
-	fmt.Printf("%T %v %F\n", xx, xx, xx)
+			// ?
+			var x int = 1
+			xx := float64(x)
+			fmt.Printf("%T %v %F\n", xx, xx, xx)
 
-	var y float64 = 1.2
-	yy := int(y)
-	fmt.Printf("%T %v %d\n", yy, yy, yy)
-	
-	var s string = "14"
-	//z = int(s)
-	i,_ := strconv.Atoi(s)
-    fmt.Printf("%T %v %d\n", i, i, i)
-	
-	h := "Hello World"
-	fmt.Println(string(h[0]))
+			var y float64 = 1.2
+			yy := int(y)
+			fmt.Printf("%T %v %d\n", yy, yy, yy)
+
+			var s string = "14"
+			//z = int(s)
+			i,_ := strconv.Atoi(s)
+		    fmt.Printf("%T %v %d\n", i, i, i)
+
+			h := "Hello World"
+			fmt.Println(string(h[0]))
 	*/
 	/*
-	var a [2]int
-	a[0] = 100
-	a[1] = 200
-	fmt.Println(a)
+		var a [2]int
+		a[0] = 100
+		a[1] = 200
+		fmt.Println(a)
 
-	var b = [2]int{100,200}
-	fmt.Println(b)
+		var b = [2]int{100,200}
+		fmt.Println(b)
 
-	var c = []int{100,200}
-	c = append(c, 300)
-	fmt.Println(c)
-	*/
-	/*
-	n := []int{1,2,3,4,5}
-	fmt.Println(n)
-	fmt.Println(n[2])
-	fmt.Println(n[2:4])
-	fmt.Println(n[:2])	
-	fmt.Println(n[2:])		
-	fmt.Println(n[:])			
-	n[2] = 100
-	fmt.Println(n)
-	var board = [][]int {
-		{0,1,2},
-		{3,4,5},
-		{6,7,8},
-	}
-	fmt.Println(board)
-	n = append(n,100,200,300,400)
-	fmt.Println(n)
-	*/
-/*
-	n := make([]int,3,5)
-	fmt.Printf("len=%d cap=%d value=%v\n",len(n),cap(n),n)
-	n = append(n,0,0)
-	fmt.Printf("len=%d cap=%d value=%v\n",len(n),cap(n),n)
-	n = append(n,1,2,3,4,5)
-	fmt.Printf("len=%d cap=%d value=%v\n",len(n),cap(n),n)
-
-	a := make([]int,3)
-	fmt.Printf("len=%d cap=%d value=%v\n",len(a),cap(a),a)
-
-	b := make([]int,0)
-	fmt.Printf("len=%d cap=%d value=%v\n",len(b),cap(b),b)
-	var c []int
-	fmt.Printf("len=%d cap=%d value=%v\n",len(c),cap(c),c)
-*/
-c := make([]int,5)
-//[0 0 0 0 0 0]
-//[0 0 0 0 0 0 1]
-//[0 0 0 0 0 0 1 2]
-//[0 0 0 0 0 0 1 2 3]
-//[0 0 0 0 0 0 1 2 3 4]
-//	c := make([]int,0,5)
-//[0]
-//[0 1]
-//[0 1 2]
-//[0 1 2 3]
-//[0 1 2 3 4]
-	for i := 0 ; i < 5; i++ {
-		c = append(c,i)
+		var c = []int{100,200}
+		c = append(c, 300)
 		fmt.Println(c)
-	}
+	*/
+	/*
+		n := []int{1,2,3,4,5}
+		fmt.Println(n)
+		fmt.Println(n[2])
+		fmt.Println(n[2:4])
+		fmt.Println(n[:2])
+		fmt.Println(n[2:])
+		fmt.Println(n[:])
+		n[2] = 100
+		fmt.Println(n)
+		var board = [][]int {
+			{0,1,2},
+			{3,4,5},
+			{6,7,8},
+		}
+		fmt.Println(board)
+		n = append(n,100,200,300,400)
+		fmt.Println(n)
+	*/
+	/*
+		n := make([]int,3,5)
+		fmt.Printf("len=%d cap=%d value=%v\n",len(n),cap(n),n)
+		n = append(n,0,0)
+		fmt.Printf("len=%d cap=%d value=%v\n",len(n),cap(n),n)
+		n = append(n,1,2,3,4,5)
+		fmt.Printf("len=%d cap=%d value=%v\n",len(n),cap(n),n)
 
+		a := make([]int,3)
+		fmt.Printf("len=%d cap=%d value=%v\n",len(a),cap(a),a)
+
+		b := make([]int,0)
+		fmt.Printf("len=%d cap=%d value=%v\n",len(b),cap(b),b)
+		var c []int
+		fmt.Printf("len=%d cap=%d value=%v\n",len(c),cap(c),c)
+	*/
+	/*
+	   c := make([]int,5)
+	   //[0 0 0 0 0 0]
+	   //[0 0 0 0 0 0 1]
+	   //[0 0 0 0 0 0 1 2]
+	   //[0 0 0 0 0 0 1 2 3]
+	   //[0 0 0 0 0 0 1 2 3 4]
+	   //	c := make([]int,0,5)
+	   //[0]
+	   //[0 1]
+	   //[0 1 2]
+	   //[0 1 2 3]
+	   //[0 1 2 3 4]
+	   	for i := 0 ; i < 5; i++ {
+	   		c = append(c,i)
+	   		fmt.Println(c)
+	   	}
+	*/
+	/*
+		m := map[string]int{"apple": 100, "banana": 200}
+		fmt.Println(m)
+		fmt.Println(m["apple"])
+		m["banana"] = 300
+		m["new"] = 500
+		fmt.Println(m)
+		fmt.Println(m["nothing"])
+
+		v,ok := m["apple"]
+		fmt.Println(v,ok);
+		v2,ok2 := m["nothing"]
+		fmt.Println(v2,ok2)
+
+		m2 := make(map[string]int)
+		m2["pc"] = 5000
+		fmt.Println(m2)
+		// ?????
+		//var m3 map[string]int
+
+		var s[]int
+		if s == nil {
+			fmt.Println("nil")
+		}
+	*/
+	/*
+		b:=[]byte{72,73}
+		fmt.Println(b)
+		fmt.Println(string(b))
+		//http://www.acii-code.com
+	*/
 }
