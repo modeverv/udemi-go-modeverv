@@ -237,25 +237,32 @@ func main() {
 		m := map[string]int{"Mike": 20, "Nacy": 24, "Messi": 30}
 		fmt.Printf("%T %v\n", m, m)
 	*/
-	// if
-	num := 9
-	if num%2 == 0 {
-		fmt.Println("by 2")
-	} else if num%3 == 0 {
-		fmt.Println("by 3")
-	} else {
-		fmt.Println("else")
-	}
+	/*
+		// if
+		num := 9
+		if num%2 == 0 {
+			fmt.Println("by 2")
+		} else if num%3 == 0 {
+			fmt.Println("by 3")
+		} else {
+			fmt.Println("else")
+		}
 
-	x, y := 10, 10
-	if x == 10 && y == 10 {
-		fmt.Println("&&")
-	}
-	if x == 10 || y == 10 {
-		fmt.Println("||")
-	}
-	if by2(10) {
-		fmt.Println("by 2!!")
+		x, y := 10, 10
+		if x == 10 && y == 10 {
+			fmt.Println("&&")
+		}
+		if x == 10 || y == 10 {
+			fmt.Println("||")
+		}
+		if by2(10) {
+			fmt.Println("by 2!!")
+		}
+	*/
+
+	// for
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
 	}
 }
 
