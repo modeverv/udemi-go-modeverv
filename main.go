@@ -259,28 +259,50 @@ func main() {
 			fmt.Println("by 2!!")
 		}
 	*/
-
-	// for
-	for i := 0; i < 10; i++ {
-		if i%3 == 0 {
-			continue
+	/*
+		// for
+		for i := 0; i < 10; i++ {
+			if i%3 == 0 {
+				continue
+			}
+			if i > 7 {
+				break
+			}
+			fmt.Println(i)
 		}
-		if i > 7 {
-			break
+		sum := 1
+		for sum < 10 {
+			sum += sum
+			fmt.Println(sum)
 		}
-		fmt.Println(i)
-	}
-	sum := 1
-	for sum < 10 {
-		sum += sum
 		fmt.Println(sum)
+
+		//for{
+		//	fmt.Println("Hello")
+		//}
+	*/
+	// range
+	l := []string{"python", "go", "java"}
+	for i := 0; i < len(l); i++ {
+		fmt.Println(i, l[i])
 	}
-	fmt.Println(sum)
+	for i, v := range l {
+		fmt.Println(i,v)
+	}
+	for _, v := range l {
+		fmt.Println(v)
+	}
 
-	//for{
-	//	fmt.Println("Hello")
-	//}
-
+	m := map[string]int {"apple":100,"banana":2000}
+	for k,v := range m {
+		fmt.Println(k,v)
+	}
+	for k := range m {
+		fmt.Println(k)
+	}
+	for _,v := range m {
+		fmt.Println(v)
+	}
 }
 
 func by2(num int) bool {
