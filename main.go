@@ -16,7 +16,7 @@ const (
 )
 
 func init() {
-	fmt.Println("Init")
+	//fmt.Println("Init")
 }
 
 /*
@@ -231,12 +231,40 @@ func main() {
 
 	//f := 1.11
 	//fmt.Println(int(f))
+	/*
+		s := []int{1, 2, 5, 6, 2, 3, 1}
+		fmt.Println(s[2:4])
+		m := map[string]int{"Mike": 20, "Nacy": 24, "Messi": 30}
+		fmt.Printf("%T %v\n", m, m)
+	*/
+	// if
+	num := 9
+	if num%2 == 0 {
+		fmt.Println("by 2")
+	} else if num%3 == 0 {
+		fmt.Println("by 3")
+	} else {
+		fmt.Println("else")
+	}
 
-	s := []int{1, 2, 5, 6, 2, 3, 1}
-	fmt.Println(s[2:4])
-	m := map[string]int{"Mike": 20, "Nacy": 24, "Messi": 30}
-	fmt.Printf("%T %v\n", m, m)
+	x, y := 10, 10
+	if x == 10 && y == 10 {
+		fmt.Println("&&")
+	}
+	if x == 10 || y == 10 {
+		fmt.Println("||")
+	}
+	if by2(10) {
+		fmt.Println("by 2!!")
+	}
+}
 
+func by2(num int) bool {
+	if num%2 == 0 {
+		return true
+	} else {
+		return false
+	}
 }
 
 // ?????
