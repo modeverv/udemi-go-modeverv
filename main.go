@@ -281,28 +281,52 @@ func main() {
 		//	fmt.Println("Hello")
 		//}
 	*/
-	// range
-	l := []string{"python", "go", "java"}
-	for i := 0; i < len(l); i++ {
-		fmt.Println(i, l[i])
-	}
-	for i, v := range l {
-		fmt.Println(i,v)
-	}
-	for _, v := range l {
-		fmt.Println(v)
-	}
+	/*
+		// range
+		l := []string{"python", "go", "java"}
+		for i := 0; i < len(l); i++ {
+			fmt.Println(i, l[i])
+		}
+		for i, v := range l {
+			fmt.Println(i,v)
+		}
+		for _, v := range l {
+			fmt.Println(v)
+		}
 
-	m := map[string]int {"apple":100,"banana":2000}
-	for k,v := range m {
-		fmt.Println(k,v)
-	}
-	for k := range m {
-		fmt.Println(k)
-	}
-	for _,v := range m {
-		fmt.Println(v)
-	}
+		m := map[string]int {"apple":100,"banana":2000}
+		for k,v := range m {
+			fmt.Println(k,v)
+		}
+		for k := range m {
+			fmt.Println(k)
+		}
+		for _,v := range m {
+			fmt.Println(v)
+		}
+	*/
+	/*
+		// switch
+		switch os := getOsName(); os {
+		case "mac":
+			fmt.Println(os)
+		case "windows":
+			fmt.Println("??????")
+		default:
+			fmt.Println("default")
+		}
+		t := time.Now()
+		fmt.Println(t.Hour())
+		switch {
+		case t.Hour() < 12:
+			fmt.Println("Morning")
+		case t.Hour() < 17:
+			fmt.Println("Evening")
+		}
+	*/
+}
+func getOsName() string {
+	return "mac"
 }
 
 func by2(num int) bool {
