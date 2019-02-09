@@ -376,11 +376,42 @@ func main() {
 			log.Fatal("Err chdir")
 		}
 	*/
-	// panic
-	save()
-	fmt.Println("OK")
+	/*
+		// panic
+		save()
+		fmt.Println("OK")
+	*/
+	// ??
+	l := []int{100, 300, 23, 11, 23, 2, 4, 6, 4}
+	// ??????????
+	fmt.Println(min(l))
+	//Q2. ????????????????????????????
+	m := map[string]int{
+		"apple":  200,
+		"banana": 300,
+		"grapes": 150,
+		"orange": 80,
+		"papaya": 500,
+		"kiwi":   90,
+	}
+	sum := 0
+	for _, v := range m {
+		sum += v
+	}
+	fmt.Println(sum)
 
 }
+
+func min(list []int) int {
+	answer := list[0]
+	for i := 0; i < len(list); i++ {
+		if answer > list[i] {
+			answer = list[i]
+		}
+	}
+	return answer
+}
+
 func save() {
 	defer func() {
 		s := recover()
