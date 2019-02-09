@@ -348,14 +348,32 @@ func main() {
 		file.Read(data)
 		fmt.Println(string(data))
 	*/
-	LoggingSettings("test.log")
-	log.Println("logging")
-	log.Printf("%T %v\n", "test", "test")
-	//log.Fatalln("error")
-	_, err := os.Open("fdafeafwafasd")
+	/*
+		// logging
+		LoggingSettings("test.log")
+		log.Println("logging")
+		log.Printf("%T %v\n", "test", "test")
+		//log.Fatalln("error")
+		_, err := os.Open("fdafeafwafasd")
+		if err != nil {
+			log.Fatal("Exit", err)
+		}
+	*/
+	file, err := os.Open("/Users/seijiro/.zshrc")
 	if err != nil {
-		log.Fatal("Exit", err)
+		log.Fatal("Err!", err)
 	}
+	defer file.Close()
+	data := make([]byte, 100)
+	count, err := file.Read(data)
+	if err != nil {
+		log.Fatal("Errrr")
+	}
+	fmt.Println(count, string(data))
+	if err = os.Chdir("test"); err != nil {
+		log.Fatal("Err chdir")
+	}
+
 }
 
 // logging
