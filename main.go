@@ -359,21 +359,38 @@ func main() {
 			log.Fatal("Exit", err)
 		}
 	*/
-	file, err := os.Open("/Users/seijiro/.zshrc")
-	if err != nil {
-		log.Fatal("Err!", err)
-	}
-	defer file.Close()
-	data := make([]byte, 100)
-	count, err := file.Read(data)
-	if err != nil {
-		log.Fatal("Errrr")
-	}
-	fmt.Println(count, string(data))
-	if err = os.Chdir("test"); err != nil {
-		log.Fatal("Err chdir")
-	}
+	/*
+		// err
+		file, err := os.Open("/Users/seijiro/.zshrc")
+		if err != nil {
+			log.Fatal("Err!", err)
+		}
+		defer file.Close()
+		data := make([]byte, 100)
+		count, err := file.Read(data)
+		if err != nil {
+			log.Fatal("Errrr")
+		}
+		fmt.Println(count, string(data))
+		if err = os.Chdir("test"); err != nil {
+			log.Fatal("Err chdir")
+		}
+	*/
+	// panic
+	save()
+	fmt.Println("OK")
 
+}
+func save() {
+	defer func() {
+		s := recover()
+		fmt.Println(s)
+	}()
+	thirdPartyConnectDB()
+}
+
+func thirdPartyConnectDB() {
+	panic("Unable to connect database!")
 }
 
 // logging
