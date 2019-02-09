@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	//	"strings"
 	//	"os/user"
 	//	"time"
@@ -324,6 +325,31 @@ func main() {
 			fmt.Println("Evening")
 		}
 	*/
+	/*
+		// defer
+		foodefer()
+		defer fmt.Println("world")
+		fmt.Println("hello")
+	*/
+	/*
+		// 3 => 2 => 1
+		fmt.Println("run")
+		defer fmt.Println(1)
+		defer fmt.Println(2)
+		fmt.Println("success")
+	*/
+	file, err := os.Open("/Users/seijiro/.zshrc")
+	fmt.Println(err)
+	defer file.Close()
+	data := make([]byte, 100)
+	file.Read(data)
+	fmt.Println(string(data))
+}
+
+func foodefer() {
+	defer fmt.Println("foo world")
+	fmt.Println("foo hello")
+
 }
 func getOsName() string {
 	return "mac"
