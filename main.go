@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"io"
+	"log"
 	"os"
 	//	"strings"
 	//	"os/user"
@@ -338,12 +340,30 @@ func main() {
 		defer fmt.Println(2)
 		fmt.Println("success")
 	*/
-	file, err := os.Open("/Users/seijiro/.zshrc")
-	fmt.Println(err)
-	defer file.Close()
-	data := make([]byte, 100)
-	file.Read(data)
-	fmt.Println(string(data))
+	/*
+		file, err := os.Open("/Users/seijiro/.zshrc")
+		fmt.Println(err)
+		defer file.Close()
+		data := make([]byte, 100)
+		file.Read(data)
+		fmt.Println(string(data))
+	*/
+	LoggingSettings("test.log")
+	log.Println("logging")
+	log.Printf("%T %v\n", "test", "test")
+	//log.Fatalln("error")
+	_, err := os.Open("fdafeafwafasd")
+	if err != nil {
+		log.Fatal("Exit", err)
+	}
+}
+
+// logging
+func LoggingSettings(logFile string) {
+	logfile, _ := os.OpenFile(logFile, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0777)
+	multiLogFile := io.MultiWriter(os.Stdout, logfile)
+	log.SetFlags(log.Ldate | log.Ltime | log.Llongfile)
+	log.SetOutput(multiLogFile)
 }
 
 func foodefer() {
